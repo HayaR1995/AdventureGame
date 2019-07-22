@@ -34,55 +34,25 @@ def house(value):
                 "what with only having a tiny dagger.")
     option = input("Would you like to (1) fight or (2) run away?")
     if option == 1:
-        if "tomahawk" in value:
             print_pause("As the wicked fairie moves to attack"
                         "you unsheath your new sword.")
-            print_pause("The'tomahawk'shines brightly in your hand"
+            print("The",value,"shines brightly in your hand"
                         "as you brace yourself for the attack.")
             print_pause("But the wicked fairie takes one look"
                         "at your shiny new toy and runs away!")
             print_pause("You have rid the town of the wicked fairie."
                         "You are victorious!")
 
-        else:
-            print_pause("You do your best...")
-            print_pause("but your dagger"
-                        "is no match for the wicked fairie.")
-            print_pause("You have been defeated!")
-        if "lance" in value:
-            print_pause("As the wicked fairie moves to attack"
-                            "you unsheath your new sword.")
-            print_pause("The'lance'shines brightly in your hand"
-                            "as you brace yourself for the attack.")
-            print_pause("But the wicked fairie takes one look"
-                            "at your shiny new toy and runs away!")
-            print_pause("You have rid the town of the wicked fairie."
-                            "You are victorious!")
-
-        else:
-            print_pause("You do your best...")
-            print_pause("but your dagger"
-                            "is no match for the wicked fairie.")
-            print_pause("You have been defeated!")
-        if "Sword" in value:
-                print_pause("As the wicked fairie moves to attack"
-                                "you unsheath your new sword.")
-                print_pause("The Sword'shines brightly in your hand"
-                                "as you brace yourself for the attack.")
-                print_pause("But the wicked fairie takes one look"
-                                "at your shiny new toy and runs away!")
-                print_pause("You have rid the town of the wicked fairie."
-                                "You are victorious!")
-        else:  
-                print_pause("You do your best...")
-                print_pause("but your dagger"
-                                "is no match for the wicked fairie.")
-                print_pause("You have been defeated!")
-                
     elif option == 2:
         print_pause("You run back into the field."
                     "Luckily, you don't seem \n"
-                    "to have been followed.") 
+                    "to have been followed.")
+    else:
+        print_pause("You do your best...")
+        print_pause("but your dagger"
+                        "is no match for the wicked fairie.")
+        print_pause("You have been defeated!")
+        
         adventure(value)
         
 def cave(value):
@@ -123,4 +93,5 @@ while True:
     elif pa == "y":
         
         print_pause("Excellent! Restarting the game ...")
+        adventure(value)
         start_game()
